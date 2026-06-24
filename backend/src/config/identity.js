@@ -1,5 +1,5 @@
 module.exports = {
-  user_id: "ronakrawal_24061999",
-  email_id: "ronak.rawal@chitkara.edu.in",
-  college_roll_number: "2210990905",
+  user_id: "ronak_2310993919",
+  email_id: "ronak@chitkara.edu.in",
+  college_roll_number: "2310993919",
 };
