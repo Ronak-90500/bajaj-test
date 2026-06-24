@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BFHL — Hierarchy Explorer</title>
+  <meta name="description" content="Analyse hierarchical node relationships using the BFHL REST API." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <header class="header">
+      <h1>BFHL <span class="accent">Hierarchy Explorer</span></h1>
+      <p class="subtitle">Enter node edges to visualise tree hierarchies and detect cycles</p>
+    </header>
+
+    <main>
+      <section>
+        <div class="card input-card">
+          <label for="nodeInput">Node Edges</label>
+
+          <textarea
+            id="nodeInput"
+            placeholder="Enter edges separated by commas or new lines&#10;e.g.  A->B, A->C, B->D, X->Y, Y->Z, Z->X"
+            spellcheck="false"
+          ></textarea>
+
+          <p class="input-hint">
+            Format: <code>X-&gt;Y</code> — single uppercase letters only &nbsp;|&nbsp;
+            <kbd>Ctrl+Enter</kbd> to submit
+          </p>
+
+          <button id="submitBtn" class="btn-primary">Analyse Hierarchy</button>
+        </div>
+      </section>
+
+      <section id="results" class="results-section hidden"></section>
+    </main>
+
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
